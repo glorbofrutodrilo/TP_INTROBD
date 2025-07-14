@@ -127,3 +127,52 @@ header h1 {
     right: 30px;
     z-index: 1000;
 }
+
+.info-title {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 32px;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.info-flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 48px;
+    margin-bottom: 40px;
+}
+
+.info-foto-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-foto {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.info-datos-box {
+    background: #b0c4de;
+    color: #222;
+    border-radius: 16px;
+    padding: 32px 40px;
+    min-width: 320px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Eliminar recuadro blanco del footer */
+.info-container > div[style*="background"] {
+    display: none !important;
+}

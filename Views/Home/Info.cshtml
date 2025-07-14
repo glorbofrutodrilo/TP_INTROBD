@@ -2,20 +2,22 @@
     ViewData["Title"] = "Información del usuario";
 }
 
-<div class="info-container">
-    <h2>Datos del usuario logueado</h2>
+<h2 class="info-title">Datos del usuario logueado</h2>
+<div class="info-flex-container">
     @if (ViewBag.Foto != null)
     {
-        <img src="/fotos/@ViewBag.Foto" alt="Foto del integrante" style="max-width:200px; border-radius:12px; margin-bottom:16px;" />
+        <div class="info-foto-container">
+            <img src="/fotos/@ViewBag.Foto" alt="Foto del integrante" class="info-foto" />
+        </div>
     }
     @if (ViewBag.Integrante != null)
     {
-        <ul>
-            <li><strong>Nombre:</strong> @ViewBag.Integrante.Nombre</li>
-            <li><strong>Apellido:</strong> @ViewBag.Integrante.Apellido</li>
-            <li><strong>Email:</strong> @ViewBag.Integrante.Email</li>
-            <li><strong>Edad:</strong> @ViewBag.Integrante.Edad</li>
-        </ul>
+        <div class="info-datos-box">
+            <div><strong>Nombre:</strong> @ViewBag.Integrante.Nombre</div>
+            <div><strong>Apellido:</strong> @ViewBag.Integrante.Apellido</div>
+            <div><strong>Email:</strong> @ViewBag.Integrante.Email</div>
+            <div><strong>Edad:</strong> @ViewBag.Integrante.Edad</div>
+        </div>
     }
 </div>
 <form asp-action="Logout" asp-controller="Home" method="post" class="logout-form">
