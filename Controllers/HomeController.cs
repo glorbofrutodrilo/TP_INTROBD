@@ -20,10 +20,10 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Login(string nombre, string password)
+    public IActionResult Login(string email, string password)
     {
-        Integrante integrante = BD.LevantarIntegrante(nombre, password);
-        if (integrante != null && integrante.Nombre == nombre && integrante.Password == password)
+        Integrante integrante = BD.LevantarIntegrante(email, password);
+        if (integrante != null && integrante.Email == email && integrante.Password == password)
         {
             string integranteStr = Objeto.ObjectToString(integrante);
             HttpContext.Session.SetString("integrante", integranteStr);
@@ -35,7 +35,7 @@ public class HomeController : Controller
             else if (integrante.Nombre.ToLower().Contains("felipe"))
                 foto = "FELI.PNG.png";
             HttpContext.Session.SetString("foto", foto);
-            return View("Info");
+            return RedirectToAction("Info");
         }
         else
         {
