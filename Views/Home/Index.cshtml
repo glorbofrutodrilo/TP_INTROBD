@@ -5,5 +5,10 @@
 <img src="/fotos/LOGOAUF.png" alt="Logo de la AUF">
     <h1>Bienvenidos al sitio web de la AUF 2</h1>
 </header>
-<div>
+<div class="login-container">
+         <form asp-action="Login" asp-controller="Home" method="post">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+         </form>
 </div>

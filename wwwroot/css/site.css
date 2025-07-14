@@ -21,3 +21,102 @@ footer {
   background-color: #f8f9fa;
   border-top: 1px solid #e9ecef;
 }
+
+body {
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header img {
+  width: 120px;
+  margin-bottom: 10px;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: #1a237e;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.login-container {
+  background: #fff;
+  padding: 32px 28px 24px 28px;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(30, 34, 90, 0.10);
+  min-width: 320px;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  padding: 12px 14px;
+  border: 1px solid #b0bec5;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+.login-container input[type="text"]:focus,
+.login-container input[type="password"]:focus {
+  border: 1.5px solid #1976d2;
+  outline: none;
+}
+
+.login-container button[type="submit"] {
+  background: linear-gradient(90deg, #1976d2 0%, #64b5f6 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  transition: background 0.2s;
+}
+
+.login-container button[type="submit"]:hover {
+  background: linear-gradient(90deg, #1565c0 0%, #42a5f5 100%);
+}
+
+.logout-form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logout-btn {
+  background: linear-gradient(90deg, #c62828 0%, #ef5350 100%);
+  color: #fff;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.logout-btn:hover {
+  background: linear-gradient(90deg, #b71c1c 0%, #e57373 100%);
+}
